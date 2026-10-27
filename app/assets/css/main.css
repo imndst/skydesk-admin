@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "@fontsource-variable/vazirmatn";
+
+/* Theme classes are built from shared/theme.ts; make sure Tailwind scans it. */
+@source "../../../shared";
+
+/* Layout rules: every container is flex/grid in normal flow. None of our own components
+   use absolute/fixed positioning, so nothing can stack on top of other content.
+   Only Nuxt UI overlays (modal, toast, menus) use their own z-index scale.
+   Runtime design tokens (colors, radius, font, scale) are injected by app/plugins/theme.ts. */
+html { -webkit-text-size-adjust: 100%; }
+body { min-height: 100dvh; overflow-x: hidden; background: var(--sd-page, var(--ui-bg)); }
+.sd-min-w-0 { min-width: 0; }
+/* Latin data (codes, emails, hex) inside RTL text */
+.sd-ltr { direction: ltr; unicode-bidi: isolate; }
+.sd-safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

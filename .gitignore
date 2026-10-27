@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Nuxt / Nitro build output
+.nuxt/
+.output/
+.data/
+.nitro/
+.cache/
+dist/
+
+# Local database (created on first run)
+data/*.db
+data/*.db-*
+
+# Test artifacts
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

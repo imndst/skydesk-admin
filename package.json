@@ -1,0 +1,73 @@
+{
+  "name": "skydesk-admin",
+  "version": "2.0.0",
+  "description": "Admin panel for selling flight tickets and hotel bookings, with an admin-configurable design-token theme system. Nuxt + Nuxt UI, Persian RTL.",
+  "author": "imndst <imndst@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imndst/skydesk-admin.git"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt-ui",
+    "admin-panel",
+    "design-tokens",
+    "theming",
+    "rtl",
+    "persian",
+    "booking"
+  ],
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
+    "test": "npm run build && vitest run",
+    "test:only": "vitest run",
+    "test:e2e": "npm run build && playwright test",
+    "postinstall": "nuxt prepare",
+    "start:demo": "node scripts/start-demo.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/vazirmatn": "^5.3.0",
+    "@nuxt/ui": "3.3.7",
+    "better-sqlite3": "12.4.1",
+    "nuxt": "3.17.7",
+    "nuxt-security": "2.2.0",
+    "tailwindcss": "4.1.13",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@iconify-json/lucide": "^1.2.147",
+    "@playwright/test": "1.56.0",
+    "vitest": "3.2.4",
+    "commander": "13.1.0"
+  },
+  "overrides": {
+    "@nuxt/icon": {
+      "@nuxt/kit": "4.5.2"
+    },
+    "@nuxt/devtools-kit": {
+      "@nuxt/kit": "4.5.2"
+    },
+    "c12": {
+      "chokidar": "4.0.3"
+    },
+    "unstorage": {
+      "chokidar": "4.0.3"
+    },
+    "impound": {
+      "unplugin": "2.3.10"
+    },
+    "unplugin-utils": "0.2.5",
+    "eslint-visitor-keys": "4.2.1",
+    "@rollup/plugin-replace": "6.0.2",
+    "vite": "6.4.3"
+  }
+}
